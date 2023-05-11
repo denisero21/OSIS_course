@@ -1,5 +1,10 @@
 Set s = CreateObject("Wscript.Shell")
-MsgBox "sOMetHinG goeS wROng", 16+4096, "Oops..."
+
+Set word = CreateObject("Word.Application")
+Set doc = word.Documents.Add()
+word.Visible = True
+
+wscript.sleep 5000
 Do
 wscript.sleep 100
 s.sendkeys"{numlock}"
